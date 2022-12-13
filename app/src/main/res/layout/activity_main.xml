@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#515151"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Liquid"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="49dp"
+        app:layout_constraintEnd_toStartOf="@+id/Gas"
+        app:layout_constraintStart_toEndOf="@+id/Solid"
+        app:layout_constraintTop_toBottomOf="@+id/Combination"
+        app:srcCompat="@drawable/liquid1" />
+
+    <ImageView
+        android:id="@+id/Cold"
+        android:layout_width="93dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/HTemp2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        app:srcCompat="@drawable/cold" />
+
+    <ImageView
+        android:id="@+id/Hot"
+        android:layout_width="93dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="51dp"
+        app:layout_constraintEnd_toStartOf="@+id/Cold"
+        app:layout_constraintStart_toEndOf="@+id/HTemp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        app:srcCompat="@drawable/hot" />
+
+    <TextView
+        android:id="@+id/HTemp"
+        android:layout_width="13dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="High   temp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tsolid" />
+
+    <TextView
+        android:id="@+id/HTemp2"
+        android:layout_width="14dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="263dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Low    Temp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tgas" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="39dp"
+        android:background="#515151"
+        android:backgroundTint="#D89191"
+        android:text="CONFIRM"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#000000"
+        app:iconPadding="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="213dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="@string/app_name"
+        android:hint="Select Temperature"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cold" />
+
+    <ImageView
+        android:id="@+id/Gas"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="47dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Combination"
+        app:srcCompat="@drawable/gas1" />
+
+    <ImageView
+        android:id="@+id/Solid"
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Icon"
+        app:srcCompat="@drawable/solid1" />
+
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_width="80dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/combine" />
+
+    <TextView
+        android:id="@+id/Combination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Combination"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toEndOf="@+id/Icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Tsolid"
+        android:layout_width="39dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Solid"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Solid" />
+
+    <TextView
+        android:id="@+id/Tliquid"
+        android:layout_width="44dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="87dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Liquid"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/Tgas"
+        app:layout_constraintStart_toEndOf="@+id/Tsolid"
+        app:layout_constraintTop_toBottomOf="@+id/Liquid" />
+
+    <TextView
+        android:id="@+id/Tgas"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="69dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Gas"
+        android:textAllCaps="true"
+        android:textColor="#201F1F"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gas" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="229dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="68dp"
+        android:contentDescription="@string/app_name"
+        android:hint="Select State of Matter"
+        app:layout_constraintBottom_toTopOf="@+id/Cold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tliquid" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="402dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="48dp"
+        android:hint="Result:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
